@@ -1,0 +1,19 @@
+# Optional local pre-commit hooks. CI is the enforced gate.
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  - repo: local
+    hooks:
+      - id: npm-run-lint-scripts
+        name: Lint (lint:scripts)
+        entry: npm run lint:scripts
+        language: system
+        pass_filenames: false
+      - id: npm-run-lint-styles
+        name: Lint (lint:styles)
+        entry: npm run lint:styles
+        language: system
+        pass_filenames: false
