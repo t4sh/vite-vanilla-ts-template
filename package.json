@@ -15,7 +15,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite --host",
-    "build": "rimraf build/**/* && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles ./package.json build",
+    "build": "rimraf build/**/* && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.cjs && copyfiles ./package.json build",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "lint:scripts": "eslint . --ext .ts",
@@ -31,7 +31,7 @@
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "@vitest/coverage-v8": "^2.0.4",
+    "@vitest/coverage-v8": "^4.1.7",
     "copyfiles": "^2.4.1",
     "dts-bundle-generator": "^9.5.1",
     "eslint": "^8.57.0",
@@ -50,7 +50,7 @@
     "stylelint-prettier": "^5.0.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
-    "vite": "^5.3.5",
-    "vitest": "^2.0.4"
+    "vite": "^8.0.14",
+    "vitest": "^4.1.7"
   }
 }
