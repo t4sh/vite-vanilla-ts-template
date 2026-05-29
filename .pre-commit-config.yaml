@@ -17,3 +17,8 @@ repos:
         entry: npm run lint:styles
         language: system
         pass_filenames: false
+      - id: trivy-fs
+        name: Trivy filesystem scan
+        entry: python .githooks/trivy-precommit.py
+        language: python
+        pass_filenames: false
